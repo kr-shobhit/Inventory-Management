@@ -48,7 +48,7 @@ def update_Items(product_id):
             print("\nProduct Modification Failed!")
 
 def delete_Items(product_id):
-    cursor.execute("DELETE FROM inventory WHERE product_id = ?",(product_id))
+    cursor.execute("DELETE FROM inventory WHERE product_id = ?",(product_id,))
     if cursor.rowcount == 1:
         print("\nProduct Deleted Successfully")
     else:
